@@ -2,7 +2,14 @@ package model;
 
 import java.util.ArrayList;
 
-public class Owner {
+/**
+ * Class defines owners that will be associated with each pet at the clinic
+ * 
+ * @author Lucius Bossio
+ * @version 1.0
+ */
+public class Owner 
+{
     int id;
     String name;
 
@@ -10,12 +17,21 @@ public class Owner {
 
     transient ArrayList<Pet> petList; 
 
-    public Owner() {
+    /**
+     * Default constructor auto increments owner ID and initializes a list of the owners pets
+     */
+    public Owner() 
+    {
         super();
         petList = new ArrayList<>();
         this.id = nextID++;
     }
 
+    /**
+     * Non default constructor sets the owners name
+     * 
+     * @param name      - name of the owner to be created
+     */
     public Owner(String name) 
     {
         this();
